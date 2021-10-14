@@ -1,8 +1,8 @@
 import './ItemListContainer.css'
 
-export const ItemListContainer = () => {
+export const ItemListContainer = (props) => {
     return <section className="ItemListContainer">
-        <h1 className="sectionTitle">BIENVENIDOS A LA TIENDA DE CELULARES by FOLLI</h1>
+        <h1 className="sectionTitle">{props.greeting}</h1>
 
         <div className="productList">
 
