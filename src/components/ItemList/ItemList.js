@@ -1,6 +1,7 @@
 import { ItemCount } from '../ItemCount/ItemCount'
 import './ItemList.css'
 
+
 export const ItemList = ( {producto} ) => {
     return <>
 
@@ -35,5 +36,6 @@ export const ItemList = ( {producto} ) => {
             <ItemCount stock="3" initial="1" />
             <button className="addBtn">Comprar</button>
         </div> */}
+
     </>
 }
