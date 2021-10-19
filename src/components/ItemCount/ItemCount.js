@@ -11,7 +11,6 @@ export const ItemCount = ( props ) => {
         if (itemCount > 1) 
         setItemcount(itemCount - 1)
     }
-
     return <div className="productQuantity">
         <button onClick={onRemove}>-</button>
         <h1>{itemCount}</h1>

@@ -1,0 +1,23 @@
+[
+    {
+        "title": "iPhone 13 PRO",
+        "description": "El iPhone en su máxima expresión",
+        "id": 1,
+        "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_13_pro__etecge8yu8q6_large.jpg",
+        "stock": 2
+    },
+    {
+        "title": "iPhone 13",
+        "description": "Una potencia extraordinaria.",
+        "id": 2,
+        "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_13__ejsyn7suyw02_large.jpg",
+        "stock": 4
+    },
+    {
+        "title": "iPhone 12",
+        "description": "Increíble como siempre.",
+        "id": 3,
+        "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_12__edurff15kyoi_large.jpg",
+        "stock": 6
+    }
+]
