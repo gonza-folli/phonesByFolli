@@ -12,7 +12,7 @@ export const ItemListContainer = (props) => {
         const phonesList = new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(phones)
-        }, 1000);
+        }, 2000);
         });
     
         phonesList
@@ -20,15 +20,16 @@ export const ItemListContainer = (props) => {
             setProducts(response)
             console.log(response)
         })
+        .catch(error => console.log(error))
     }, [])
 
     return <section className="ItemListContainer">
             <h1 className="sectionTitle">{props.greeting}</h1>
 
             <div className="productList">
-                {products?.map((producto) => 
+                {products ? products.map((producto) => 
                     <ItemList producto={producto} key={producto.id}/>
-                )}
+                ) : <div className="loading"></div>}
             </div>
     </section>
 }

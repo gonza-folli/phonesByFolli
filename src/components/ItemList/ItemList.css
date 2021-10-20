@@ -28,6 +28,15 @@
 .productDesc {
     font-size: regular;
 }
+
+.productStock {
+    font-weight: 300;
+    font-size: 14px;
+    color: gray;
+    position: absolute;
+    left: 20px;
+    bottom: 82px;
+}
 .addBtn {
     position: absolute;
     right: 0px;
