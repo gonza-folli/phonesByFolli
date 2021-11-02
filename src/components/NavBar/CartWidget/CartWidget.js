@@ -10,7 +10,7 @@ export const CartWidget = () => {
         <FontAwesomeIcon icon={faShoppingCart} className="cartIcon"/>
         <div className="cartCounter">
             <img src={textImg} alt="globotexto" />
-            <p>1</p>
+            <p className="cartText">1</p>
         </div>        
     </div>
     </>

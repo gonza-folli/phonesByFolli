@@ -11,9 +11,9 @@ export const ItemCount = ( props ) => {
         if (itemCount > 1) 
         setItemcount(itemCount - 1)
     }
-    return <div className="productQuantity">
-        <button onClick={onRemove}>-</button>
+    return <div className={`productQuantity ${props.className}`} >
+        <button className={props.className} onClick={onRemove}>-</button>
         <h1>{itemCount}</h1>
-        <button onClick={onAdd}>+</button>
+        <button className={props.className} onClick={onAdd}>+</button>
     </div>
 }

@@ -22,7 +22,7 @@
 .cartCounter img {
     width: 35px;
 }
-p {
+p.cartText {
     margin-top: -37px;
     color: white;
     font-size: 20px;

@@ -1,23 +1,62 @@
 [
     {
+        "id": 1,
+        "category" : "phones",
         "title": "iPhone 13 PRO",
         "description": "El iPhone en su máxima expresión",
-        "id": 1,
+        "details" : "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life. Let’s Pro.",
         "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_13_pro__etecge8yu8q6_large.jpg",
+        "price": 999,
         "stock": 2
     },
     {
+        "id": 2,
+        "category" : "phones",
         "title": "iPhone 13",
         "description": "Una potencia extraordinaria.",
-        "id": 2,
+        "details" : "Our most advanced dual‑camera system ever. Durability that’s front and center. And edge to edge. A lightning-fast chip that leaves the competition behind. A huge leap in battery life you’ll notice every day.",
         "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_13__ejsyn7suyw02_large.jpg",
+        "price": 699,
         "stock": 4
     },
     {
+        "id": 3,
+        "category" : "phones",
         "title": "iPhone 12",
         "description": "Increíble como siempre.",
-        "id": 3,
+        "details": "A superpowerful chip. 5G speed. An advanced dual‑camera system. A Ceramic Shield front that's tougher than any smartphone glass. And a bright, beautiful OLED display. iPhone 12 has it all — in two great sizes.",
         "image": "https://www.apple.com/v/iphone/home/ba/images/overview/compare/compare_iphone_12__edurff15kyoi_large.jpg",
+        "price": 599,
         "stock": 6
+    },
+    {
+        "id": 4,
+        "category" : "airpods",
+        "title": "AirPods 2nd generation",
+        "description": "Wireless. Effortless. Magical.",
+        "details": "With plenty of talk and listen time, voice-activated Siri access, and an available wireless charging case, AirPods deliver an incredible wireless headphone experience. Simply take them out and they’re ready to use with all your devices. Put them in your ears and they connect immediately, immersing you in rich, high-quality sound. Just like magic.",
+        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_pro__e9uzt0mzviem_small_2x.png",
+        "price": 129,
+        "stock": 3
+    },
+    {
+        "id": 5,
+        "category" : "airpods",
+        "title": "AirPods 3rd generation",
+        "description": "All-new with Spatial Audio",
+        "details": "It’s magic, remastered. With spatial audio that places sound all around you. Adaptive EQ that tunes music to your ears, and longer battery life that charges up in a snap.",
+        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_3rd_gen__dyuzfy04ht0m_large.png",
+        "price": 179,
+        "stock": 8
+    },
+    {
+        "id": 6,
+        "category" : "airpods",
+        "title": "AirPods PRO",
+        "description": "Arrival of the fittest",
+        "details": "Active Noise Cancellation for immersive sound. Transparency mode for hearing what’s happening around you. A customizable fit for all-day comfort. Magic like you’ve never heard.",
+        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_pro__e9uzt0mzviem_large.png",
+        "price": 249,
+        "stock": 4
     }
 ]
