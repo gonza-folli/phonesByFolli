@@ -11,7 +11,7 @@ export const ItemDetail = ({producto}) => {
                     <h2 className="productDetailPrice">USD {producto.price}</h2>
                     <p className="productDetailStock">Stock disponible: {producto.stock} Unidades</p>
                     <ItemCount className="productDetailCounter" stock={producto.stock} initial="1" />
-                    <button className="addDetailBtn">COMPRAR</button>
+                    <button className="addDetailBtn">AGREGAR AL CARRITO</button>
                 </div>
             </div>
 

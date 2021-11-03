@@ -1,0 +1,40 @@
+.contactUs {
+    background-color: rgba(255,255,255,0.60);
+    margin: 5% 15% 0 15%;
+    width: 70%;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ .contactUs a {
+     text-decoration: none;
+     color: black;
+ }
+.socialMediaDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsappIcon, .facebookIcon, .instagramIcon, .twitterIcon {
+    font-size: 35px;
+    align-self: flex-start;
+    margin: 0 2%;
+}
+.whatsappIcon {
+    color: rgb(70,194,84);
+}
+.facebookIcon {
+    color: rgb(56,85,153);
+}
+.instagramIcon {
+    color: rgb(205,48,146);
+}
+.twitterIcon {
+    color: rgb(29,155,240);
+}
+.socialMediaDiv a {
+    margin: 0 2%;
+}

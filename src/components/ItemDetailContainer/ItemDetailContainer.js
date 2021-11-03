@@ -20,8 +20,8 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     getItem()
       .then((res) => {
-            const itemFiltered = res.filter(e => parseInt(e.id) === parseInt(itemId))
-            setItem(itemFiltered[0]);
+            const itemFiltered = res.find(e => e.id === parseInt(itemId))
+            itemFiltered && setItem(itemFiltered)
       })
       .catch((err) => console.log(err));
   }, [itemId]);

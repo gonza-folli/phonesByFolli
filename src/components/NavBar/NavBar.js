@@ -19,14 +19,16 @@ export const NavBar = () => {
             <ul className="NavBar">
                 <li className="NavBarItem">
                     <Link className="NavBarLink" to="/category/phones">Celulares</Link>
-                    {/* <a className="NavBarLink" href="/#">Accesorios</a> */}
                 </li>
                 <li className="NavBarItem">
-                    <Link className="NavBarLink" to="/category/airpods">Accesorios</Link>
-                    {/* <a className="NavBarLink" href="/#">Accesorios</a> */}
+                    <Link className="NavBarLink" to="/category/auriculares">Auriculares</Link>
                 </li>
-                <li className="NavBarItem"><a className="NavBarLink" href="/#">Soporte</a></li>
-                <li className="NavBarItem"><a className="NavBarLink" href="/#">Contacto</a></li>
+                <li className="NavBarItem">
+                    <Link className="NavBarLink" to="/category/tablets">Tablets</Link>
+                </li>
+                <li className="NavBarItem">
+                    <Link className="NavBarLink" to="/contactus">Contacto</Link>
+                </li>
                 <CartWidget/>
             </ul>
             

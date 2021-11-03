@@ -31,17 +31,27 @@
     },
     {
         "id": 4,
-        "category" : "airpods",
+        "category" : "phones",
+        "title": "iPhone SE",
+        "description": "Lots to love. Less to spend.",
+        "details": "Phone SE packs our powerful A13 Bionic chip into a popular design at our most affordable price. It’s just what you’ve been waiting for.",
+        "image": "https://www.apple.com/v/iphone/home/bc/images/overview/compare/compare_iphone_se__bw7vzp0qauuq_large.jpg",
+        "price": 399,
+        "stock": 7
+    },
+    {
+        "id": 5,
+        "category" : "auriculares",
         "title": "AirPods 2nd generation",
         "description": "Wireless. Effortless. Magical.",
         "details": "With plenty of talk and listen time, voice-activated Siri access, and an available wireless charging case, AirPods deliver an incredible wireless headphone experience. Simply take them out and they’re ready to use with all your devices. Put them in your ears and they connect immediately, immersing you in rich, high-quality sound. Just like magic.",
-        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_pro__e9uzt0mzviem_small_2x.png",
+        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_2nd_gen__fw52r8rxrpyu_large.png",
         "price": 129,
         "stock": 3
     },
     {
-        "id": 5,
-        "category" : "airpods",
+        "id": 6,
+        "category" : "auriculares",
         "title": "AirPods 3rd generation",
         "description": "All-new with Spatial Audio",
         "details": "It’s magic, remastered. With spatial audio that places sound all around you. Adaptive EQ that tunes music to your ears, and longer battery life that charges up in a snap.",
@@ -50,13 +60,63 @@
         "stock": 8
     },
     {
-        "id": 6,
-        "category" : "airpods",
+        "id": 7,
+        "category" : "auriculares",
         "title": "AirPods PRO",
         "description": "Arrival of the fittest",
         "details": "Active Noise Cancellation for immersive sound. Transparency mode for hearing what’s happening around you. A customizable fit for all-day comfort. Magic like you’ve never heard.",
         "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_pro__e9uzt0mzviem_large.png",
         "price": 249,
         "stock": 4
+    },
+    {
+        "id": 8,
+        "category" : "auriculares",
+        "title": "AirPods MAX",
+        "description": "A radically original composition.",
+        "details": "Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.",
+        "image": "https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_max__b14s2x6q07rm_large.png",
+        "price": 549,
+        "stock": 3
+    },
+    {
+        "id": 9,
+        "category" : "tablets",
+        "title": "iPad Pro",
+        "description": "The ultimate iPad experience.",
+        "details": "The ultimate iPad experience. Now with breakthrough M1 performance, a breathtaking XDR display, and blazing‑fast 5G wireless. Buckle up.",
+        "image": "https://www.apple.com/v/ipad/home/br/images/overview/compare_ipad_pro__erf9x8mw04sy_large.png",
+        "price": 799,
+        "stock": 2
+    },
+    {
+        "id": 10,
+        "category" : "tablets",
+        "title": "iPad Air",
+        "description": "Powerful. Colorful. Wonderful.",
+        "details": "An all-screen design with a stunning 10.9‑inch Liquid Retina display featuring fast, easy, and secure Touch ID",
+        "image": "https://www.apple.com/v/ipad/home/br/images/overview/compare_ipad_air__bxjv33pk6nte_large.png",
+        "price": 599,
+        "stock": 4
+    },
+    {
+        "id": 11,
+        "category" : "tablets",
+        "title": "iPad 10.2",
+        "description": "Delightfully capable. Surprisingly affordable.",
+        "details": "Powerful. Easy to use. Versatile. The new iPad is designed for all the things you love to do. Work, play, create, learn, stay connected, and more. All at an incredible value.",
+        "image": "https://www.apple.com/v/ipad/home/br/images/overview/compare_ipad_10_2__fwgwy7jydtea_large.png",
+        "price": 329,
+        "stock": 3
+    },
+    {
+        "id": 12,
+        "category" : "tablets",
+        "title": "iPad Mini",
+        "description": "Mega power. Mini sized.",
+        "details": "The magic of iPad. In the palm of your hand. Where big ideas come to life. With power that packs a punch.",
+        "image": "https://www.apple.com/v/ipad/home/br/images/overview/compare_ipad_mini__czcsk9ukpeie_large.png",
+        "price": 499,
+        "stock": 3
     }
 ]

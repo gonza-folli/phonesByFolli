@@ -3,6 +3,11 @@
     font-size: 30px;
 }
 
+.sectionSubTitle {
+    margin-top: 3%;
+    font-size: 25px;
+}
+
 .productList {
     display: flex;
     justify-content: center;
