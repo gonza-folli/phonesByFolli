@@ -38,3 +38,27 @@
 .socialMediaDiv a {
     margin: 0 2%;
 }
+@media screen and (max-width: 460px) {
+    .contactUs {
+        margin: 5% 5% 0 5%;
+        width: 90%;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contactUs h3 {
+        font-size: 18px;
+        margin-top: 6%;
+    }
+    .contactUs h2 {
+        font-size: 20px;
+        margin-top: 6%;
+    }
+    .contactUs h2 {
+        margin-top: 6%;
+    }
+    .contactUs a {
+        font-size: 14px;
+    }
+}

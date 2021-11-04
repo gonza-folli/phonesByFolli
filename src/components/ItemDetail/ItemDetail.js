@@ -1,4 +1,5 @@
 import { ItemCount } from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom';
 import './ItemDetail.css'
 
 export const ItemDetail = ({producto}) => {
@@ -11,8 +12,9 @@ export const ItemDetail = ({producto}) => {
                     <h2 className="productDetailPrice">USD {producto.price}</h2>
                     <p className="productDetailStock">Stock disponible: {producto.stock} Unidades</p>
                     <ItemCount className="productDetailCounter" stock={producto.stock} initial="1" />
-                    <button className="addDetailBtn">AGREGAR AL CARRITO</button>
+                    <Link to="/cart">
+                        <button className="addDetailBtn">AGREGAR AL CARRITO</button>
+                    </Link>
                 </div>
             </div>
-
 }

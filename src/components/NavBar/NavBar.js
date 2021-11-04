@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom';
 export const NavBar = () => {
     return (
     <header className="App-header">
-        <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
-
+        <div className="App-logo-div"> 
+            <Link to="/"></Link>
+            <img src={logo} className="App-logo" alt="logo" />  
+        </div>
         <input type="checkbox" className="burgerMenu" id="burgerMenu" />
         <label htmlFor="burgerMenu" className="burgerMenuLabel">
                 <FontAwesomeIcon icon={faBars} id="burger" className="burgerIcon"/>
