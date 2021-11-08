@@ -1,19 +1,19 @@
-import { useState } from 'react'
 import './ItemCount.css'
-export const ItemCount = ( props ) => {
+export const ItemCount = ( {initial, stock, count, setCount, className} ) => {
 
-    const [itemCount, setItemcount] = useState(Number(props.initial))
+    // const [itemCount, setItemcount] = useState(Number(initial))
     const onAdd = () => {
-        if (itemCount < props.stock)
-        setItemcount(itemCount + 1)
+        if (count < stock)
+        setCount(count + 1)
     }
     const onRemove = () => {
-        if (itemCount > 1) 
-        setItemcount(itemCount - 1)
+        if (count > 1) 
+        setCount(count - 1)
     }
-    return <div className={`productQuantity ${props.className}`} >
-        <button className={props.className} onClick={onRemove}>-</button>
-        <h1>{itemCount}</h1>
-        <button className={props.className} onClick={onAdd}>+</button>
+
+    return <div className={`productQuantity ${className}`} >
+        <button className={className} onClick={onRemove}>-</button>
+        {count>1 ? <h1>{count}</h1> : <h1>{initial}</h1>}
+        <button className={className} onClick={onAdd}>+</button>
     </div>
 }

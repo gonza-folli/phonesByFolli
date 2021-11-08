@@ -17,14 +17,14 @@ export const ItemDetailContainer = () => {
         });
 
 
-  useEffect(() => {
+useEffect(() => {
     getItem()
-      .then((res) => {
+    .then((res) => {
             const itemFiltered = res.find(e => e.id === parseInt(itemId))
             itemFiltered && setItem(itemFiltered)
-      })
-      .catch((err) => console.log(err));
-  }, [itemId]);
+    })
+    .catch((err) => console.log(err));
+}, [itemId]);
 
 
     return <>

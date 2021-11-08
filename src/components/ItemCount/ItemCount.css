@@ -23,12 +23,11 @@
 }
 
 .productDetailCounter {
-    /* justify-content: space-between;
-    display: flex;*/
     flex-grow: 0; 
     position: initial;
     width: 200px;
     bottom: 0px;
+    margin-top: 15px;
     align-self: center;
 }
 
