@@ -14,15 +14,12 @@ export const ItemCount = ( {initial, stock, onAdd, className} ) => {
         setItemcount(itemCount - 1)
     }
 
-    // useEffect( () => {
-    //     onAdd(itemCount)
-    //     console.log("hola")
-    // }, [itemCount,onAdd])
-
-    return <div className={`productQuantity ${className}`} >
-        <button className={className} onClick={onRemove}>-</button>
-        {itemCount>1 ? <h1>{itemCount}</h1> : <h1>{initial}</h1>}
-        <button onClick={() =>onAdd(itemCount)} className="addDetailBtn">Confirmar cantidad</button>
-        <button className={className} onClick={onSuma}>+</button>
-    </div>
+    return <>
+        <div className={`productQuantity ${className}`} >
+            <button className={className} onClick={onRemove}>-</button>
+            {itemCount>1 ? <h1>{itemCount}</h1> : <h1>{initial}</h1>}
+            <button className={className} onClick={onSuma}>+</button>
+        </div>
+        <button onClick={() =>onAdd(itemCount)} className="addDetailBtn">AGREGAR AL CARRITO</button>
+    </>
 }
