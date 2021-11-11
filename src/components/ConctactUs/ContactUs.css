@@ -9,10 +9,10 @@
     flex-direction: column;
     justify-content: space-around;
 }
- .contactUs a {
-     text-decoration: none;
-     color: black;
- }
+.contactUs a {
+    text-decoration: none;
+    color: black;
+}
 .socialMediaDiv {
     display: flex;
     align-items: center;
