@@ -4,24 +4,17 @@ import { useContext, useState, useEffect } from 'react'
 import './ItemDetail.css'
 import Swal from 'sweetalert2'
 import { cartContext } from '../Context/CartProvider/CartProvider';
-// import { getFirestore } from '../../firebase';
-// import { doc, getDoc } from '@firebase/firestore';
-// import { collection, getDocs } from '@firebase/firestore';
+
 
 export const ItemDetail = ({producto}) => {
 
-    const {addItem, isItemInCart} = useContext(cartContext)
+    const {addItem, isItemInCart, isThereRemainingItems} = useContext(cartContext)
 
     const [count, setCount] = useState(null) //En esta variable almaceno el valor que traigo del hijo
 
-    const onAdd = (cantidad) => setCount(cantidad)
+    const onAdd = (cantidad) => setCount(cantidad) //funcion para setear en el valor que traigo del hijo
 
-    // useEffect( () => {
-    //     //traer toda la coleccion
-    //     const db = getFirestore();
-    //     getDocs(collection(db, "items")).then((snapshot) =>console.log(snapshot.docs.map((doc)=> doc.data())))
-    // },[])
-
+    //funcion para alertar sobre el producto agregado al carrito y ejecutar la funcion d agregar
     useEffect( () => {
         if (count) {
             Swal.fire({
@@ -31,10 +24,11 @@ export const ItemDetail = ({producto}) => {
                 confirmButtonText: 'OK',
                 timer: 3500
                 })
-                addItem(producto, count)
-                setCount(null)
+            addItem(producto, count)
+            setCount(null) //se vuelve a setear en null para que no entre en loop infinito
         }
-    }, [isItemInCart, count, producto, addItem])
+    }, [count, producto, addItem])
+
 
     return <div className="productDetailContainer">
         <img alt="phone1" className="productDetailImg" src={producto.image} />
@@ -46,16 +40,25 @@ export const ItemDetail = ({producto}) => {
             <h2 className="productDetailPrice">USD {producto.price}</h2>
 
             {/* (Des) Renderizado de Stock y Contador */}
-            {isItemInCart(producto.id) ? 
-            <button className="addDetailBtn"><Link to="/cart" >IR AL CARRITO</Link></button> :
-            <>
-            <div className="productDetailNumberDiv">
-                <p className="productDetailStock">Stock disponible: {producto.stock} Unidades</p>
-                <ItemCount className="productDetailCounter" stock={producto.stock} initial="1" onAdd={onAdd}/>
-            </div>
-            </>
+            {isItemInCart(producto.id) && isThereRemainingItems(producto.id) ? 
+                <>
+                    <p className="productDetailStock">Stock disponible: {producto.remain} Unidades</p>
+                    <ItemCount className="productDetailCounter" stock={producto.remain} initial="1" onAdd={onAdd}/>
+                    <button className="addDetailBtn"><Link to="/cart" >IR AL CARRITO</Link></button>
+                </> 
+            : 
+            isItemInCart(producto.id) ?
+                <>
+                    <button className="addDetailBtn"><Link to="/cart" >IR AL CARRITO</Link></button>
+                </>
+            : 
+                <>
+                    <div className="productDetailNumberDiv">
+                        <p className="productDetailStock">Stock disponible: {producto.stock} Unidades</p>
+                        <ItemCount className="productDetailCounter" stock={producto.stock} initial="1" onAdd={onAdd}/>
+                    </div>
+                </>
             }
-
         </div>
     </div>
 }

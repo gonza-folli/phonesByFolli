@@ -10,6 +10,8 @@ export const CartWidget = () => {
 
     const {cartItems} = useContext(cartContext)
 
+    // useEffect ( () => {}, [cartItems])
+
     return <>
     <div className="cartIconDiv">
         <Link to="/cart" >
@@ -18,7 +20,6 @@ export const CartWidget = () => {
         <FontAwesomeIcon icon={faShoppingCart} className="cartIcon"/>
             <div className="cartCounter">
                 {cartItems.length > 0 ? <img src={textImg} alt="globotexto" /> : null}
-                {/* <p className="cartText">{cartItems.length}</p> */}
                 <p className="cartText">{cartItems.length > 0 ? cartItems.map(x => x.quantity).reduce((a,b)=>(a+b)) : null}</p>
         </div> 
     </div>

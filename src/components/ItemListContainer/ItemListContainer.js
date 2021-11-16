@@ -1,7 +1,7 @@
+import { collection, getDocs, getFirestore } from '@firebase/firestore'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { ItemList } from '../ItemList/ItemList'
-import phones from '../phones.json'
 import './ItemListContainer.css'
 
 export const ItemListContainer = (props) => {
@@ -9,25 +9,31 @@ export const ItemListContainer = (props) => {
     const [products, setProducts] = useState(null);
     const {categoryId} = useParams()
 
-    const phonesList = () => new Promise((resolve,reject) => {
-            resolve(phones)
-    })
+    function orderArray (response) {
+        let responseOrdered = response.sort(function(a,b) { 
+            if (a.category > b.category) {return -1}
+            if (a.category < b.category) {return 1}
+            return 0
+        })
+        return responseOrdered
+    }
 
     useEffect(() => {
-        phonesList()
-        .then(response => {
-            if (response && categoryId)  //me filtra si hay alguna categoria mandada como parametro
-            { 
-                let categoryFiltered = response.filter(e => e.category === categoryId)
-                setProducts(categoryFiltered)
-            } else { //cuando no se envió ninguna categoria, se setea el total del JSON 
-                setTimeout(() => {
-                    setProducts(response)
-                }, 2000);
-            }
-        })
-        .catch(error => console.log(error))
+            const db = getFirestore()
+            getDocs(collection(db,"products"))
+            .then(snapshot => {
+                let response = snapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
+                let responseOrdered = orderArray(response) //funcion para ordenar el array
+                if (responseOrdered && categoryId) {
+                    let categoryFiltered = responseOrdered.filter(e => e.category === categoryId)
+                    setProducts(categoryFiltered)
+                } else {
+                    setProducts(responseOrdered)
+                }
+            })
+            .catch(error => console.log(error))
     }, [categoryId])
+
 
     return <section className="ItemListContainer">
             {categoryId ? <h2 className="sectionSubTitle">{`SECCIÓN ${categoryId.toUpperCase()}`}</h2> : <h1 className="sectionTitle">{props.greeting}</h1> }
