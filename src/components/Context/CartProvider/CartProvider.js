@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from "react"
-import Swal from 'sweetalert2'
+import { createContext, useState } from "react"
+import { deleteAllPopUp, deleteItemPopUp } from "../../Alertas/Alertas"
 
 export const cartContext = createContext()
 
@@ -7,10 +7,6 @@ export const CartProvider = ({children}) => {
     
     const [cartItems , setCartItems] = useState([])
     const [total, setTotal] = useState(0) // para la funcion de totalizar el carrito
-
-    useEffect(() => {
-        console.log(cartItems)
-    }, [cartItems])
 
     //Funcion para agregar items al carrito
     const addItem = (item, cantidad) => {
@@ -34,33 +30,13 @@ export const CartProvider = ({children}) => {
         const filtrado = cartItems.filter(e => e.id !== itemId )
         setCartItems(filtrado)
         const productoEliminado = cartItems.find(x => x.id === itemId)
-        productoEliminado.remain = productoEliminado.stock //seteo valores default
-        productoEliminado.quantity = 0 //seteo valores default
-        console.log(productoEliminado)
-        Swal.fire({
-            title: productoEliminado.title,
-            text: `Se elimino del carrito el Producto ${productoEliminado.title}`,
-            icon: 'error',
-            confirmButtonText: 'OK',
-            timer: 3000
-            })
+        deleteItemPopUp(productoEliminado)
     }
 
     //Funcion para Limpiar items al carrito
     const clear = () => {
         console.log(cartItems)
-        cartItems.map( x => {
-                x.remain = x.stock
-                x.quantity = 0
-                return x
-        })
-        Swal.fire({
-            title: 'Se vació el Carrito',
-            text: `Se eliminaron todos los productos del Carrito`,
-            icon: 'error',
-            confirmButtonText: 'OK',
-            timer: 3000
-            })
+        deleteAllPopUp()
         setCartItems([])
     }
 
@@ -72,6 +48,7 @@ export const CartProvider = ({children}) => {
             }
     }
 
+    //funcion para chequear el remanente de stock
     const isThereRemainingItems = (itemId) => {
         const product = isItemInCart(itemId)
         if (product) {

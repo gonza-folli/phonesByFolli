@@ -14,6 +14,19 @@ export const Cart = () => {
         totalCart(cartItems)
     }, [cartItems, totalCart])
 
+    function checkOut (datosCart, valorFinal) {
+        const order = {
+            buyer: {
+                name: "Gonzalo",
+                phone: 3564334501,
+                email: "gonza@gonza.com"
+            },
+            items: datosCart,
+            total: valorFinal
+        }
+        return console.log(order)
+    }
+
     return <section className="cart">
     <h1>Items en el carrito listos para Checkout</h1>
     {cartItems.length > 0 ? 
@@ -22,13 +35,14 @@ export const Cart = () => {
             <FontAwesomeIcon onClick={() => clear()} className="trashAllIcon" icon={faTrash}></FontAwesomeIcon>
         </div>
         <h3>EL TOTAL ES DE: {total} USD</h3>
+        <h2 onClick={() => checkOut(cartItems, total)}>FINALIZAR COMPRA</h2>
         </div> : 
         <div className="cartHeaderEmpty">
             <p>Upsss... No se Encontraron Productos</p>
             <h3 ><Link className="rootLink" to="./">Start Shopping NOW! </Link></h3>
-        </div> }
+        </div> 
+    }
     
-
     {cartItems.map( (item) => 
         <div className="productCartContainer" key={item.id}>
             <div className="productCartImgDiv"><img className="productCartImg" alt="imagenItem"src={item.image}/></div>

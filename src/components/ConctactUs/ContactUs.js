@@ -1,7 +1,7 @@
 import './ContactUs.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { contactData } from '../../ContactData/ContactData'
+import { contactData } from '../ContactData/ContactData'
 
 
 export const ContactUs = () => {
