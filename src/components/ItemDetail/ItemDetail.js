@@ -39,6 +39,7 @@ export const ItemDetail = ({producto}) => {
             : 
             isItemInCart(producto.id) ?
                 <>
+                    <p className="productDetailStock">NO queda Stock Disponible</p>
                     <button className="addDetailBtn"><Link to="/cart" >IR AL CARRITO</Link></button>
                 </>
             : 

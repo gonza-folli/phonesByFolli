@@ -5,8 +5,8 @@
     width: 70%;
     border: 1px solid black;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 .cart h1 {
     margin-top: 10px;
@@ -19,10 +19,10 @@
     background-color: rgba(255,255,255,0.60);
     border-radius: 10px;
     border-bottom: 2px black solid;
-    display: flex;
-    height: 80px;
-    flex-direction: row-reverse;
-    justify-content: center;
+    /* display: flex;
+    height: 80px; */
+    /* flex-direction: row-reverse;
+    justify-content: center; */
     position: relative;
 }
 .cartHeaderEmpty {
@@ -39,6 +39,10 @@
     color: black;
     font-size: 20px;
 }
+.itemLink{
+    text-decoration: none;
+    color: black;
+}
 .cartHeader h3{
     align-self: center;
     /* margin: auto */
@@ -50,7 +54,7 @@
     align-items: center;
     position: absolute;
     right: 40px;
-    top: 30%;
+    top: 40%;
     cursor: pointer;
 }
 .trashAllIcon {
@@ -76,6 +80,9 @@
     height: 0.5px;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+}
+.productCartContainer h4 {
+    font-weight: 400;
 }
 .productCartImgDiv {
     border-radius: 20px;
@@ -111,4 +118,25 @@
 .trashIcon:hover {
     font-size: 25px;
     color: black;
+}
+form {
+    margin: 20px;
+}
+label {
+    display: block;
+    margin: 15px;
+    text-align: start;
+    font-size: 16px;
+}
+input {
+    margin-left: 20px;
+    width: 300px;
+    height: 20px;
+    font-size: 16px;
+    font-family: 'Play';
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+input:focus {
+    outline: none
 }

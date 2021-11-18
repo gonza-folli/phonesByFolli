@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import { deleteAllPopUp, deleteItemPopUp } from "../../Alertas/Alertas"
+import { deleteAllPopUp, deleteItemPopUp, checkOutPopUp } from "../../Alertas/Alertas"
 
 export const cartContext = createContext()
 
@@ -34,9 +34,9 @@ export const CartProvider = ({children}) => {
     }
 
     //Funcion para Limpiar items al carrito
-    const clear = () => {
+    const clear = (checkOut) => {
         console.log(cartItems)
-        deleteAllPopUp()
+        checkOut ? checkOutPopUp(checkOut) : deleteAllPopUp()
         setCartItems([])
     }
 
