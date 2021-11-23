@@ -34,9 +34,8 @@ export const CartProvider = ({children}) => {
     }
 
     //Funcion para Limpiar items al carrito
-    const clear = (checkOut) => {
-        console.log(cartItems)
-        checkOut ? checkOutPopUp(checkOut) : deleteAllPopUp()
+    const clear = (data) => {
+        data ? checkOutPopUp(data) : deleteAllPopUp()
         setCartItems([])
     }
 

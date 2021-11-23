@@ -30,13 +30,12 @@ const deleteAllPopUp = () => {
         })
 }
 
-const checkOutPopUp = (id) => {
+const checkOutPopUp = (data) => {
     Swal.fire({
         title: 'Compra realizada con éxito',
-        text: `ID de la compra es: ${id}`,
+        text: `ID de la compra es: ${data.id}`,
         icon: 'success',
         confirmButtonText: 'OK',
-        // timer: 3000
         })
 }
 

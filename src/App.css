@@ -27,4 +27,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+}
+.App::after {
+  content: '';
+  display: block;
+  height: 80px;
 }

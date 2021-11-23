@@ -6,12 +6,9 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { ContactUs } from './components/ConctactUs/ContactUs';
 import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './components/Context/CartProvider/CartProvider';
-
-
+import { Footer } from './components/Footer/Footer';
 
 function App() {
-
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -34,6 +31,7 @@ function App() {
               <Cart />
             </Route>
           </Switch>
+          <Footer />
         </CartProvider>
       </BrowserRouter>
     </div>

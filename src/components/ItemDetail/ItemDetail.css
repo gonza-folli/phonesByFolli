@@ -63,7 +63,7 @@
     font-size: 23px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 590px) {
     
     .productDetailContainer {
         flex-direction: column;
@@ -101,5 +101,6 @@
     }
     .addDetailBtn {
         font-size: 15px;
+        margin: 6% 0
     }
 }
