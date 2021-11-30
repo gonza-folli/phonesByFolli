@@ -36,6 +36,6 @@ export const NavBar = () => {
             
         </nav>
         
-  </header>
-  )
+    </header>
+    )
 }

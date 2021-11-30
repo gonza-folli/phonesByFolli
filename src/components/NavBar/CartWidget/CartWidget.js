@@ -10,8 +10,6 @@ export const CartWidget = () => {
 
     const {cartItems} = useContext(cartContext)
 
-    // useEffect ( () => {}, [cartItems])
-
     return <>
     <div className="cartIconDiv">
         <Link to="/cart" >

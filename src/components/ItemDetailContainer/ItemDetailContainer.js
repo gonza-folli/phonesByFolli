@@ -9,19 +9,19 @@ import './ItemDetailContainer.css'
 export const ItemDetailContainer = () => {
     const {itemId} = useParams()
     const [item, setItem] = useState(null);
-    const {isItemInCart} = useContext(cartContext) //Context para consumir el estado del producto
+    const {isItemInCart} = useContext(cartContext)
 
     useEffect( () => {
-        if (isItemInCart(itemId)) { //chequear si ya he "comprado" este producto
+        if (isItemInCart(itemId)) {
             const product = isItemInCart(itemId)
-            setItem(product) // renderizo el comprado
+            setItem(product)
         } else {
             const db = getFirestore()
             const docRef = doc(db, "products", itemId);
             getDoc(docRef)
             .then(snapshot => {
                 const response = {...snapshot.data(), id: snapshot.id}
-                    setItem(response) // renderizo el original
+                    setItem(response)
                 })
             .catch((err) => console.log(err));
         }

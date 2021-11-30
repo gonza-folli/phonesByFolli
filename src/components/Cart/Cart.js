@@ -27,7 +27,6 @@ export const Cart = () => {
         setFormInfo({...formInfo, [event.target.name]: event.target.value})
     }
 
-    //Funcion finalizar compra
     function checkOut () {
         setButtonState(false)
         const order = {

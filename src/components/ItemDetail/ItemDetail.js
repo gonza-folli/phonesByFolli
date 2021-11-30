@@ -9,14 +9,14 @@ export const ItemDetail = ({producto}) => {
 
     const {addItem, isItemInCart, isThereRemainingItems} = useContext(cartContext)
 
-    const [count, setCount] = useState(null) //En esta variable almaceno el valor que traigo del hijo contador
-    const onAdd = (cantidad) => setCount(cantidad) //funcion para setear en el valor que traigo del hijo
+    const [count, setCount] = useState(null)
+    const onAdd = (cantidad) => setCount(cantidad)
 
     useEffect( () => {
         if (count) {
-            addPopUp(producto, count) //alertar sobre el producto agregado al carrito
-            addItem(producto, count) //agregar item al cartContext
-            setCount(null) //se vuelve a setear en null para que no entre en loop infinito
+            addPopUp(producto, count)
+            addItem(producto, count)
+            setCount(null)
         }
     }, [count, producto, addItem])
 
@@ -29,7 +29,6 @@ export const ItemDetail = ({producto}) => {
             <h4 className="productDetailDetails">{producto.details}</h4>
             <h2 className="productDetailPrice">USD {producto.price}</h2>
 
-            {/* (Des) Renderizado de Stock y Contador */}
             {isItemInCart(producto.id) && isThereRemainingItems(producto.id) ? 
                 <>
                     <p className="productDetailStock">Stock disponible: {producto.remain} Unidades</p>

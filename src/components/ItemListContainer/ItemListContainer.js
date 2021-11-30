@@ -13,7 +13,6 @@ export const ItemListContainer = (props) => {
 
     const {isItemInCart} = useContext(cartContext)
 
-    //funcion para ordenar el array - la consumo en el useEffect
     function sortArray (array) {
         let sortedArray = array.sort(function(a,b) { 
             if (a.category > b.category) {return -1}
@@ -28,14 +27,14 @@ export const ItemListContainer = (props) => {
             getDocs(collection(db,"products"))
             .then(snapshot => {
                 const response = snapshot.docs.map(doc => {
-                    const product = ({...doc.data(), id: doc.id}) //defino product agregandole el ID
-                    if (isItemInCart(product.id)) { //valido si algun producto ha sido incluido en el cart
-                        return isItemInCart(product.id) // si ya se encontraba, renderizo ese elemento
+                    const product = ({...doc.data(), id: doc.id})
+                    if (isItemInCart(product.id)) {
+                        return isItemInCart(product.id)
                     } else {
-                        return product //si no se encontraba en cart, renderizo el que traigo de Firebase
+                        return product
                     }
                 })
-                const sortedResponse = sortArray(response) //funcion para ordenar el array
+                const sortedResponse = sortArray(response)
                 if (sortedResponse && categoryId) {
                     const categoryFiltered = sortedResponse.filter(e => e.category === categoryId)
                     setProducts(categoryFiltered)

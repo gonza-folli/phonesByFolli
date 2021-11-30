@@ -6,9 +6,8 @@ export const cartContext = createContext()
 export const CartProvider = ({children}) => {
     
     const [cartItems , setCartItems] = useState([])
-    const [total, setTotal] = useState(0) // para la funcion de totalizar el carrito
+    const [total, setTotal] = useState(0) 
 
-    //Funcion para agregar items al carrito
     const addItem = (item, cantidad) => {
         const product = isItemInCart(item.id)
         if (product) {
@@ -25,7 +24,6 @@ export const CartProvider = ({children}) => {
         }
     }
 
-    //Funcion para quitar items al carrito
     const removeItem = (itemId) => {
         const filtrado = cartItems.filter(e => e.id !== itemId )
         setCartItems(filtrado)
@@ -33,13 +31,11 @@ export const CartProvider = ({children}) => {
         deleteItemPopUp(productoEliminado)
     }
 
-    //Funcion para Limpiar items al carrito
     const clear = (data) => {
         data ? checkOutPopUp(data) : deleteAllPopUp()
         setCartItems([])
     }
 
-    //funcion para chequear si se encuentra o no en el carrito
     const isItemInCart = (itemId) => {
         if (cartItems.length >= 1 && cartItems.find((e) => e.id === itemId)) {
             let product = cartItems.find((e) => e.id === itemId)
@@ -47,7 +43,6 @@ export const CartProvider = ({children}) => {
             }
     }
 
-    //funcion para chequear el remanente de stock
     const isThereRemainingItems = (itemId) => {
         const product = isItemInCart(itemId)
         if (product) {
@@ -55,7 +50,6 @@ export const CartProvider = ({children}) => {
         } else return false
     }
 
-    //funcion para sumar el total del carrito
     const totalCart = (itemsInCart) => {
         if (itemsInCart.length > 0) {
             const numeros = []
