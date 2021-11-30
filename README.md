@@ -1,6 +1,7 @@
 ## PHONES BY FOLLI STORE
 
 PAGE PREVIEW
+![Previeww](https://github.com/gonza-folli/phonesByFolli/blob/main/src/components/assets/preview.gif)
 ![Preview](https://imgur.com/a/SexJ8f0.gif)
 ___
 
