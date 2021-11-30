@@ -51,7 +51,7 @@ export const Cart = () => {
                 <label>Nombre Completo:<input type="text" name="name" value={formInfo.name} onChange={handleChange}/></label>
                 <label>Número de Teléfono:<input type="text" name="phone" value={formInfo.phone} onChange={handleChange}/></label>
                 <label>E-mail:<input type="text" name="email" value={formInfo.email} onChange={handleChange}/></label>
-                {buttonState ? <button disabled={!(formInfo.name && formInfo.phone && formInfo.email)} type="button" onClick={checkOut}>FINALIZAR COMPRA</button> : <div className="loading"></div>}
+                {buttonState ? <button className="rootLink" disabled={!(formInfo.name && formInfo.phone && formInfo.email)} type="button" onClick={checkOut}>FINALIZAR COMPRA</button> : <div className="loading"></div>}
             </form>
             <div className="trashDiv"><FontAwesomeIcon onClick={() =>clear()} className="trashAllIcon" icon={faTrash}></FontAwesomeIcon></div>
         </div>
