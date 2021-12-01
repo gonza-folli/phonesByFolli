@@ -5,8 +5,10 @@ PAGE PREVIEW
 ![Preview](https://github.com/gonza-folli/phonesByFolli/blob/main/src/components/assets/preview.gif)
 ___
 
-[LINK DEL REPOSITORIO](https://github.com/gonza-folli/phonesByFolli)
-[LINK PROYECTO LIVE](https://phonesbyfolli.web.app/)
+
+ - [LINK DEL REPOSITORIO](https://github.com/gonza-folli/phonesByFolli)
+ 
+ - [LINK PROYECTO LIVE](https://phonesbyfolli.web.app/)
 
 ___
 
